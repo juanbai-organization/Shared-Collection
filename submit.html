@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #dddddd;
+    }
+    </style>
+
+    <script>
+    function check(){
+        if ((document.getElementById("name").value=="")||(document.getElementById("url").value=="")){
+            alert("Please fill in the fields.");
+            return false;
+        }
+        return res;
+    }
+    function res(){
+        query = "/?";
+        query += document.getElementById("name").value;
+        query += "?????"
+        query += document.getElementById("url").value;
+        window.location.href = query;
+        return true;
+    }
+        
+    </script>
+
+<!-- your webpage info goes here -->
+
+    <title>Wiki</title>
+	<link rel="stylesheet" href="style.css" type="text/css" />
+	
+</head>
+<body>
+
+<!-- webpage content goes here in the body -->
+
+	<div id="Wiki">
+		<div id="logo">
+			<h1><a href="/" id="logoLink">Wiki</a></h1>
+		</div>
+		<div id="nav">
+			<ul>
+				<li><a href="./index.html">Collection</a></li>
+			</ul>	
+		</div>
+
+		<div id="content">
+			<h2>Contribute</h2>
+
+
+            <form method="GET" action=/?? onSubmit="return check();">
+                Contributor:<br>
+                <input type="text" name="name"id="name" value="">
+                <br>
+                URL:<br>
+                <input type="text" name="url"id="url" value="">
+                <br><br>
+                <input type="submit" value="Submit">
+            </form> 
+
+
+				
+		<div id="footer">
+			<p>
+				Webpage made by <a target="_blank[]">[tiz2102]</a>
+			</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
